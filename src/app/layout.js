@@ -1,4 +1,5 @@
 import Footer from './components/footer/Footer';
+// import Footer from '@/app/'
 import Navbar from './components/navbar/Navbar';
 
 import './globals.css';
