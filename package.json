@@ -2,11 +2,11 @@
   "name": "nexttutorial",
   "version": "0.1.0",
   "private": true,
-  "main": "server.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "serve": "npx serve out"
   },
   "dependencies": {
     "next": "13.4.13",
