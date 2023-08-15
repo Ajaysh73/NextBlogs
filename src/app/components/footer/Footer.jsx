@@ -11,7 +11,7 @@ const Footer = () => {
           className={styles.icon}
           width={15}
           height={15}
-          src='/1.png'
+          src='/1.png/'
           alt='ajayIO'
         />
         <Image
