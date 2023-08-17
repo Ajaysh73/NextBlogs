@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import React from 'react';
 import styles from './page.module.css';
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 
 const links = [
   {
@@ -45,6 +46,7 @@ const Navbar = () => {
         SharmaIO
       </Link>
       <div className={styles.links}>
+        <DarkModeToggle />
         {links.map((link) => (
           <Link
             className={styles.link}
