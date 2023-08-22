@@ -6,12 +6,14 @@ import { getApiUrl } from '@/utils/apiUtils';
 
 async function getData() {
   const apiUrl = getApiUrl(`/api/posts`);
+  console.log(`apiUrl ${apiUrl}`);
   const res = await fetch(apiUrl, {
     cache: 'no-store',
   });
-  // const res = await fetch('https://next-blogs-roan.vercel.app/api/posts', {
+  // const res = await fetch(apiUrl, {
   //   cache: 'no-store',
   // });
+
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
