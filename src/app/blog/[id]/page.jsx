@@ -2,14 +2,16 @@ import React from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { getApiUrl } from '@/utils/apiUtils';
 
 async function getData(id) {
-  const res = await fetch(
-    `https://next-blogs-roan.vercel.app/api/posts/${id}`,
-    {
-      cache: 'no-store',
-    }
-  );
+  const apiUrl = getApiUrl(`/api/posts/${id}`);
+  // const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+  //   cache: 'no-store',
+  // });
+  const res = await fetch(apiUrl, {
+    cache: 'no-store',
+  });
 
   if (!res.ok) {
     return notFound();
