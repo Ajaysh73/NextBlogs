@@ -23,7 +23,6 @@ const Dashboard = () => {
     const desc = e.target[1].value;
     const image = e.target[2].value;
     const content = e.target[3].value;
-    const apiUrl = getApiUrl(`/api/posts`);
     await fetch('/api/posts', {
       method: 'POST',
       body: JSON.stringify({
