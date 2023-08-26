@@ -23,6 +23,7 @@ export default function Home() {
         <Image
           src={Hero}
           className={styles.img}
+          alt=''
         />
       </div>
     </div>

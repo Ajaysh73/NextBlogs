@@ -10,9 +10,6 @@ async function getData() {
   const res = await fetch(apiUrl, {
     cache: 'no-store',
   });
-  // const res = await fetch(apiUrl, {
-  //   cache: 'no-store',
-  // });
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');

@@ -6,12 +6,7 @@ import { getApiUrl } from '@/utils/apiUtils';
 
 async function getData(id) {
   const apiUrl = getApiUrl(`/api/posts/${id}`);
-  // const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
-  //   cache: 'no-store',
-  // });
-  // const res = await fetch(apiUrl, {
-  //   cache: 'no-store',
-  // });
+
   const res = await fetch(apiUrl, {
     cache: 'no-store',
   });
@@ -21,6 +16,16 @@ async function getData(id) {
   }
 
   return res.json();
+}
+
+export async function generateMetadata({ params }) {
+  // read route params
+  const post = await getData(params.id);
+
+  return {
+    title: post.title,
+    description: post.desc,
+  };
 }
 
 const BlogPost = async ({ params }) => {
